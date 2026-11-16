@@ -1,0 +1,4 @@
+dc_id,dc_name,province,service_region,pallet_capacity,demand_multiplier
+DC-CKG01,DC Cakung Central Hub,DKI Jakarta,Greater Jakarta & West Java,180000,1.35
+DC-SBY01,DC Rungkut Regional Hub,Jawa Timur,"East Java, Bali & Nusa Tenggara",120000,0.95
+DC-MDN01,DC KIM Medan Regional Hub,Sumatera Utara,North Sumatra & Aceh,75000,0.65

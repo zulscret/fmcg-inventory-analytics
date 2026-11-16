@@ -1,0 +1,26 @@
+sku_id,product_name,category,abc_xyz_segment,abc_class,xyz_class,revenue_idr,cum_revenue_pct,mean_demand_per_dc,cv_score,strategic_inventory_policy
+SKU-001,Mie Sedaap Goreng Original 85g (Karton 40s),Food & Beverage,AZ,A,Z,31474140000.0,20.07,497.3,0.353,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-002,Mie Sedaap Soto 75g (Karton 40s),Food & Beverage,AZ,A,Z,26112156000.0,36.72,427.6,0.385,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-003,Mie Sedaap Selection Korean Spicy 87g (Karton 40s),Food & Beverage,AZ,A,Z,21985080000.0,50.73,317.2,0.446,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-015,Floridina Orange Real Pulp 350ml (Karton 24s),Food & Beverage,AZ,A,Z,12962250000.0,59.0,347.7,0.424,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-016,ISOPLUS Isotonic Drink 350ml (Karton 24s),Food & Beverage,AZ,A,Z,9804450000.0,65.25,245.3,0.447,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-017,JasJus Jeruk Segar Serbuk (Karton 10 Renceng),Food & Beverage,AZ,A,Z,9043268000.0,71.01,325.8,0.389,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-005,Daia Detergent Bubuk Bunga 1.8kg Bag,Fabric Care,AZ,A,Z,5902214000.0,74.78,356.4,0.368,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-004,SoKlin Liquid Detergent Softergent 720ml Pouch,Fabric Care,AZ,A,Z,5426522500.0,78.24,584.0,0.373,Strategic Safety Stock; Direct Plant Replenishment; Order Smoothing
+SKU-008,Nuvo Family Antibacterial Bodywash Mild 450ml Pouch,Personal Care,BZ,B,Z,4436500000.0,81.06,437.7,0.371,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-011,Zinc Anti-Dandruff Shampoo Refreshing Cool 340ml,Personal Care,BZ,B,Z,3463386000.0,83.27,190.1,0.42,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-006,Royale Parfum Collection Pelembut 720ml Pouch,Fabric Care,BZ,B,Z,2978976000.0,85.17,233.8,0.415,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-018,Ekonomi Pencuci Piring Jeruk Nipis 650ml Pouch,Home Care,BZ,B,Z,2818500300.0,86.97,533.8,0.356,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-009,GIV White Beauty Bodywash Damask Rose 450ml Pouch,Personal Care,BZ,B,Z,2768612000.0,88.73,293.3,0.405,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-019,Mama Lemon Jeruk Nipis 680ml Pouch,Home Care,BZ,B,Z,2745456000.0,90.48,492.2,0.364,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-010,Ciptadent Maxi Complete Toothpaste 190g,Personal Care,BZ,B,Z,2698058000.0,92.2,460.3,0.37,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-014,Top Coffee Gula Aren Bag 9x25g,Food & Beverage,BZ,B,Z,2422784000.0,93.75,404.8,0.365,Centralized Hub Stocking; Pull Replenishment from DC Cakung
+SKU-024,Olala Jelly Drink Strawberry 150ml (Karton 24s),Food & Beverage,CZ,C,Z,2293215000.0,95.21,84.8,0.526,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-020,WPC Pembersih Porselen & Kloset Classic 780ml,Home Care,CZ,C,Z,1737565500.0,96.32,198.7,0.426,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-021,Super Sol Karbol Wangi Pinus 800ml Pouch,Home Care,CZ,C,Z,1412393600.0,97.22,179.6,0.403,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-013,Kodomo Baby Hair & Body Wash Pump 200ml,Personal Care,CZ,C,Z,1340550000.0,98.07,94.8,0.514,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-012,Emeron Nutritive Shampoo Black Shine 170ml,Personal Care,CZ,C,Z,1236032000.0,98.86,146.0,0.455,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-007,SoKlin Pemutih Regular Botol 500ml,Fabric Care,CZ,C,Z,670620600.0,99.29,154.3,0.381,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-022,Proclin Penghilang Noda Pakaian 400ml Pouch,Fabric Care,CZ,C,Z,488602800.0,99.6,67.6,0.577,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-023,Fres & Natural Cologne Green Miracle 100ml Botol,Personal Care,CZ,C,Z,402784000.0,99.86,48.0,0.616,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out
+SKU-025,Klin Smart Karbol Sereh Refill 450ml,Home Care,CZ,C,Z,222148500.0,100.0,40.7,0.674,Make-to-Order / Direct Vendor Ship; Rationalize or Phase Out

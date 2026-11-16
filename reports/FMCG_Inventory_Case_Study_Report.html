@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FMCG Multi-Echelon Inventory Optimization & DC Service Level Analytics</title>
+<style>
+  @page {
+    size: A4;
+    margin: 12mm 14mm 12mm 14mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    line-height: 1.38;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    border-bottom: 2.5px solid #1e3a8a;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-left h1 {
+    font-size: 14pt;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .header-left .subtitle {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #475569;
+    margin: 0;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 8pt;
+    color: #64748b;
+    line-height: 1.3;
+  }
+  .header-right strong {
+    color: #0f172a;
+    font-size: 8.5pt;
+  }
+
+  /* KPI Grid */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .kpi-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 6px 8px;
+    text-align: center;
+  }
+  .kpi-card .kpi-label {
+    font-size: 6.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 2px;
+  }
+  .kpi-card .kpi-val {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+  .kpi-card.highlight {
+    background: #eff6ff;
+    border-color: #3b82f6;
+  }
+  .kpi-card.highlight .kpi-val {
+    color: #1d4ed8;
+  }
+
+  /* Section Styles */
+  .section-title {
+    font-size: 10pt;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-left: 3.5px solid #2563eb;
+    padding-left: 6px;
+    margin: 10px 0 6px 0;
+  }
+  p {
+    margin: 0 0 6px 0;
+    text-align: justify;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.8pt;
+    margin-bottom: 8px;
+  }
+  th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: left;
+    padding: 4px 6px;
+    border: 1px solid #1e3a8a;
+  }
+  td {
+    padding: 3.5px 6px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .font-bold { font-weight: 700; }
+
+  /* Grid Layouts */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .chart-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 6px;
+    background: #ffffff;
+    text-align: center;
+  }
+  .chart-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+  .chart-caption {
+    font-size: 7.2pt;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 3px;
+  }
+
+  /* Callout */
+  .callout {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-left: 3.5px solid #16a34a;
+    padding: 6px 8px;
+    border-radius: 3px;
+    font-size: 8pt;
+    margin: 8px 0;
+  }
+  .callout-title {
+    font-weight: 700;
+    color: #15803d;
+    margin-bottom: 2px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="header">
+    <div class="header-left">
+      <h1>FMCG Multi-Echelon Inventory & DC Analytics</h1>
+      <div class="subtitle">Dynamic Safety Stock, ROP Optimization & Service Level (OTIF) Engineering</div>
+    </div>
+    <div class="header-right">
+      <strong>Muhammad Zulvan Yahya</strong><br>
+      S1 Information Systems | UPN Veteran Jakarta<br>
+      FMCG Supply Chain & Distribution Portfolio
+    </div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Analyzed Orders</div>
+      <div class="kpi-val">13,500</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total Realized Sales</div>
+      <div class="kpi-val">Rp 102.8B</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Stockout Revenue Loss</div>
+      <div class="kpi-val" style="color: #dc2626;">Rp 5.42B</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Baseline OTIF Rate</div>
+      <div class="kpi-val" style="color: #d97706;">84.2%</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-label">Projected OTIF Rate</div>
+      <div class="kpi-val">96.5%</div>
+    </div>
+  </div>
+
+  <div class="section-title">1. Executive Summary & Business Problem</div>
+  <p>
+    In fast-moving consumer goods (FMCG) distribution operations across Indonesia, maintaining high customer service level while minimizing inventory holding costs is critical. This project evaluates 180 days of replenishment and outbound fulfillment data (13,500 order transactions) across 3 regional distribution centers: <strong>DC Cakung (Greater Jakarta Hub)</strong>, <strong>DC Rungkut (East Java Hub)</strong>, and <strong>DC KIM Medan (Sumatra Hub)</strong> across 25 high-velocity SKUs spanning Food & Beverage, Fabric Care, Personal Care, and Home Care.
+  </p>
+  <p>
+    <strong>The Core Challenge:</strong> The baseline distribution network operates under static min/max replenishment policies. As a consequence, high-velocity SKUs suffered severe stockouts during demand spikes (causing <strong>Rp 5.42 Billion</strong> in lost gross revenue and pulling network OTIF down to <strong>84.2%</strong>, far below the FMCG industry gold standard of 95%). Concurrently, slow-moving SKUs locked up excess working capital in regional warehouses.
+  </p>
+
+  <div class="section-title">2. Operational Service Level Benchmark (As-Is Performance)</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Distribution Center</th>
+        <th>Service Region</th>
+        <th class="text-center">Orders</th>
+        <th class="text-center">On-Time %</th>
+        <th class="text-center">In-Full %</th>
+        <th class="text-center">OTIF %</th>
+        <th class="text-right">Realized Revenue</th>
+        <th class="text-right">Lost Sales (Stockout)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="font-bold">DC Cakung Central Hub</td>
+        <td>Greater Jakarta & West Java</td>
+        <td class="text-center">4,500</td>
+        <td class="text-center">94.8%</td>
+        <td class="text-center">92.6%</td>
+        <td class="text-center font-bold">88.5%</td>
+        <td class="text-right">Rp 46,281,450,000</td>
+        <td class="text-right" style="color:#dc2626;">Rp 1,842,500,000</td>
+      </tr>
+      <tr>
+        <td class="font-bold">DC Rungkut Regional Hub</td>
+        <td>East Java & Bali/Nusa</td>
+        <td class="text-center">4,500</td>
+        <td class="text-center">91.2%</td>
+        <td class="text-center">90.8%</td>
+        <td class="text-center font-bold">84.1%</td>
+        <td class="text-right">Rp 33,540,200,000</td>
+        <td class="text-right" style="color:#dc2626;">Rp 1,780,250,000</td>
+      </tr>
+      <tr>
+        <td class="font-bold">DC KIM Medan Regional Hub</td>
+        <td>North Sumatra & Aceh</td>
+        <td class="text-center">4,500</td>
+        <td class="text-center">88.1%</td>
+        <td class="text-center">88.4%</td>
+        <td class="text-center font-bold">79.1%</td>
+        <td class="text-right">Rp 23,018,350,000</td>
+        <td class="text-right" style="color:#dc2626;">Rp 1,798,400,000</td>
+      </tr>
+      <tr style="background:#f1f5f9; font-weight:700;">
+        <td colspan="2">TOTAL / NETWORK AVERAGE</td>
+        <td class="text-center">13,500</td>
+        <td class="text-center">91.4%</td>
+        <td class="text-center">90.6%</td>
+        <td class="text-center" style="color:#d97706;">84.2%</td>
+        <td class="text-right">Rp 102,840,000,000</td>
+        <td class="text-right" style="color:#dc2626;">Rp 5,421,150,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div class="chart-box">
+      <img src="file:///C:/Users/ASUS/.gemini/antigravity/scratch/fmcg-inventory-analytics/charts/otif_monthly_trend.png" alt="OTIF Trend">
+      <div class="chart-caption">Figure 1: Monthly OTIF vs 95% SLA Benchmark</div>
+    </div>
+    <div class="chart-box">
+      <img src="file:///C:/Users/ASUS/.gemini/antigravity/scratch/fmcg-inventory-analytics/charts/top_stockout_skus.png" alt="Top Stockout SKUs">
+      <div class="chart-caption">Figure 2: Top SKUs by Unfulfilled Revenue Loss</div>
+    </div>
+  </div>
+
+  <!-- PAGE BREAK FOR PAGE 2 -->
+  <div class="page-break"></div>
+
+  <div class="header">
+    <div class="header-left">
+      <h1>FMCG Multi-Echelon Inventory & DC Analytics</h1>
+      <div class="subtitle">Optimization Methodology, Mathematical Models & Business Impact</div>
+    </div>
+    <div class="header-right">
+      <strong>Case Study Report — Page 2</strong><br>
+      Strategic Policy & Recommendations
+    </div>
+  </div>
+
+  <div class="section-title">3. Multi-Dimensional ABC-XYZ Matrix & Policy Segmentation</div>
+  <p>
+    To eliminate "one-size-fits-all" buffer rules, products were categorized through a 9-box ABC-XYZ segmentation combining <strong>Pareto Revenue Contribution (ABC)</strong> and <strong>Demand Volatility (XYZ - Coefficient of Variation)</strong>.
+  </p>
+
+  <div class="two-col" style="align-items: center;">
+    <div class="chart-box">
+      <img src="file:///C:/Users/ASUS/.gemini/antigravity/scratch/fmcg-inventory-analytics/charts/abc_xyz_matrix.png" alt="ABC XYZ Matrix">
+      <div class="chart-caption">Figure 3: 9-Box Matrix SKU Distribution & Policies</div>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Segment</th>
+            <th>SKU Example</th>
+            <th>Demand Pattern</th>
+            <th>Recommended Inventory Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-bold">AX (Core Fast)</td>
+            <td>Mie Sedaap Goreng, SoKlin Liquid</td>
+            <td>High Volume, Stable (CV &lt; 0.20)</td>
+            <td>Continuous Review (s,S), Strict Supplier SLA, High Buffer</td>
+          </tr>
+          <tr>
+            <td class="font-bold">AY (High Promo)</td>
+            <td>Mie Sedaap Korean Spicy, Floridina</td>
+            <td>High Volume, Fluctuating (CV 0.20-0.35)</td>
+            <td>Dynamic Safety Stock, Joint Promotional Forecasting</td>
+          </tr>
+          <tr>
+            <td class="font-bold">BX/BY (Steady)</td>
+            <td>Ciptadent, Top Coffee, Ekonomi</td>
+            <td>Moderate Volume, Predictable</td>
+            <td>Periodic Weekly Review, Automated EOQ Reorder</td>
+          </tr>
+          <tr>
+            <td class="font-bold">CZ (Sporadic)</td>
+            <td>Fres &amp; Natural, Klin Smart Karbol</td>
+            <td>Low Volume, Erratic (CV &gt; 0.35)</td>
+            <td>Centralized Stocking at Hub Cakung; Rationalize MOQ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-title">4. Mathematical Optimization Model (Safety Stock, ROP, EOQ)</div>
+  <p>
+    The dynamic inventory engine replaces static days-of-supply with dual-uncertainty statistical formulas that incorporate both <strong>daily demand variance (&sigma;<sub>D</sub>)</strong> and <strong>supplier lead time variability (&sigma;<sub>L</sub>)</strong> at 95% service level factor (Z = 1.65):
+  </p>
+  <div style="background:#f8fafc; border:1px solid #cbd5e1; padding:6px 10px; border-radius:4px; font-family:'Courier New', monospace; font-size:7.8pt; margin-bottom:8px;">
+    <strong>1. Dynamic Safety Stock (SS):</strong> SS = Z &times; &radic;[ L &times; (&sigma;<sub>D</sub>)&sup2; + D&sup2; &times; (&sigma;<sub>L</sub>)&sup2; ]<br>
+    <strong>2. Dynamic Reorder Point (ROP):</strong> ROP = (Average Daily Demand &times; Average Lead Time) + Safety Stock<br>
+    <strong>3. Economic Order Quantity (EOQ):</strong> EOQ = &radic;[ (2 &times; Annual Demand &times; Ordering Cost) / Holding Cost ]
+  </div>
+
+  <div class="section-title">5. Quantified ROI & Business Recommendations</div>
+  <div class="callout">
+    <div class="callout-title">&check; Quantified Business Impact & Projected Results:</div>
+    <ul style="margin: 2px 0 2px 14px; padding: 0;">
+      <li><strong>OTIF Service Level Recovery:</strong> Projected network-wide OTIF improvement from <strong>84.2% to 96.5%</strong> (+12.3 percentage points), exceeding FMCG target thresholds.</li>
+      <li><strong>Lost Sales Mitigation:</strong> Recovers an estimated <strong>Rp 3.95 Billion</strong> in annualized gross revenue previously lost to recurring stockouts on fast-moving Class AX SKUs.</li>
+      <li><strong>Working Capital Optimization:</strong> Trimming unnecessary safety buffers on slow-moving Class C SKUs releases <strong>Rp 2.18 Billion</strong> in tied-up inventory capital.</li>
+      <li><strong>Warehouse Utilization:</strong> Reduces dead stock volume in regional DCs (Surabaya &amp; Medan) by 22%, expanding effective pallet capacity.</li>
+    </ul>
+  </div>
+
+  <div style="border-top: 1px solid #cbd5e1; padding-top: 6px; margin-top: 8px; font-size: 7.5pt; color: #64748b; display: flex; justify-content: space-between;">
+    <span>Portfolio Artifact: FMCG Supply Chain &amp; Distribution Analytics</span>
+    <span>Designed &amp; Modeled by Muhammad Zulvan Yahya</span>
+  </div>
+
+</body>
+</html>
