@@ -1,4 +1,4 @@
-# 📦 FMCG Multi-Echelon Inventory Optimization & Distribution Center Analytics
+# FMCG Multi-Echelon Inventory Optimization & Distribution Center Analytics
 > **End-to-End Supply Chain Case Study: Dynamic Safety Stock, Reorder Point (ROP) Engineering, and Outbound Service Level (OTIF) Optimization Across 3 Regional Distribution Centers**
 
 [![Author](https://img.shields.io/badge/Author-Muhammad%20Zulvan%20Yahya-1B365D?style=flat&logo=github)](https://github.com/zulscret)
@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 In high-velocity Fast-Moving Consumer Goods (FMCG) distribution across Indonesia, balancing **customer service level (OTIF)** with **working capital efficiency** is a critical operational challenge. 
 
 This repository contains an end-to-end analytical case study analyzing **180 days of order fulfillment and inventory replenishment (13,500 order transactions)** across 3 major distribution hubs:
@@ -20,7 +20,7 @@ across **25 high-velocity SKUs** spanning Food & Beverage (*Mie Sedaap, Floridin
 
 ---
 
-## 🚨 Business Problem & As-Is Baseline
+##  Business Problem & As-Is Baseline
 The legacy distribution network operated on static min/max replenishment rules. This led to severe operational vulnerabilities:
 1. **Recurring Stockouts on High-Velocity SKUs:** Fast-moving products suffered intermittent stockouts during peak retail replenishment cycles, causing **Rp 5.42 Billion in lost gross revenue**.
 2. **Subpar OTIF Delivery:** Network-wide On-Time In-Full (OTIF) service level languished at **84.2%**, falling short of the **95.0% FMCG industry standard**.
@@ -28,7 +28,7 @@ The legacy distribution network operated on static min/max replenishment rules. 
 
 ---
 
-## 🏗️ Repository Architecture
+##  Repository Architecture
 ```text
 fmcg-inventory-analytics/
 ├── data/
@@ -56,7 +56,7 @@ fmcg-inventory-analytics/
 
 ---
 
-## 📊 Methodology & Analytical Framework
+##  Methodology & Analytical Framework
 
 ### 1. Multi-Dimensional ABC-XYZ Matrix
 Rather than applying uniform stocking rules, SKUs were segmented using a combined **Pareto Value Contribution (ABC)** and **Coefficient of Variation (XYZ)** matrix:
@@ -87,7 +87,7 @@ $$\text{Economic Order Quantity (EOQ)} = \sqrt{\frac{2 \times \text{Annual Deman
 
 ---
 
-## 📈 Key Results & Business Impact
+##  Key Results & Business Impact
 
 | Metric | Baseline (As-Is) | Optimized (To-Be) | Operational Impact |
 |---|---|---|---|
@@ -99,7 +99,7 @@ $$\text{Economic Order Quantity (EOQ)} = \sqrt{\frac{2 \times \text{Annual Deman
 
 ---
 
-## 🚀 How to Run the Pipeline
+##  How to Run the Pipeline
 ```bash
 # 1. Clone repository
 git clone https://github.com/zulscret/fmcg-inventory-analytics.git
@@ -114,7 +114,7 @@ python generate_report_pdf.py
 
 ---
 
-## 👨‍💻 Author
+##  Author
 **Muhammad Zulvan Yahya**  
 *S1 Information Systems — Universitas Pembangunan Nasional "Veteran" Jakarta*  
 *Specialization: Supply Chain Analytics, Business Analysis, Process Optimization, SQL & Data Modeling*
